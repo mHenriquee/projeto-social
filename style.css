@@ -1,12 +1,68 @@
 @charset "UTF-8";
 
+/* Resetando as regras globais do css */
 * {
     padding: 0px;
     margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(imagens/fundo-madeira.jpg);
+/* Colocando e arrumando a imagem de fundo (sempre colocar background-size: cover, attachment:fixed, width:100vw height:100vh */
+
+html, body {
+    background: url(imagens/fundo-madeira.jpg) no-repeat top center;
     background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
 }
+
+main {
+    height: 100vh;
+    position: relative;
+}
+
+/* position absolute e relative para centralizar a div + transform para colocar no centro (-50%, -50%) */
+section#telefone{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url(imagens/frame-iphone.png);
+    background-repeat: no-repeat;
+    width: 311px;
+    height: 627px;
+}
+
+section#botoes {
+    text-align: end;
+}
+
+section#botoes img{
+    width: 50px;
+    margin: 8px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.856);
+    box-sizing: border-box;
+}
+
+section#botoes a{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#botoes img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.651);
+    transform: translate(-3px, -3px);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.877);
+    transition: transform 0.3s;
+}
+
+iframe#tela {
+    position: relative;
+    top:80px;
+    left:22px;
+    width: 268px;
+    height: 472px;
+}
+
